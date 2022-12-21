@@ -1,0 +1,130 @@
+/*
+  Theme Name: Gelius
+  Theme URI: https://www.gelius.com.br/
+  Description: A Gelius, localizada em Mirassol, é hoje uma das maiores produtoras de móveis do Brasil, com 31 anos de mercado e o objetivo de fazer famílias felizes.
+  Author: Maya Comunicação
+  Author uri: http://mayacomunicacao.com.br
+  License: GPL
+  Version: 1.0
+  Domain Path: /languages
+*/
+
+@charset "UTF-8";
+
+:root {
+    --color-main: #ff0000;
+    --color-base: #ccc;
+    --color-third: #;
+}
+
+.whats{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+}
+body{
+  position: relative;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 120px;
+}
+.fake{
+  height: 120px;
+  background: transparent;
+  width: 100%;
+}
+.blocks .block-lines {
+  padding: 0;
+}
+#slide_lines .item{
+  padding: 50px 90px;
+  flex-grow: 1;
+  flex-basis: auto;
+  color: white;
+  text-align: center;
+}
+#slide_lines .owl-item{
+  display: flex;
+}
+.blocks .item img {
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+#slide_lines .owl-stage{
+  display: flex;
+  flex-wrap: wrap;
+}
+.blocks .box a{
+  color: white;
+}
+.pg-search{
+  padding: 80px 0;
+}
+.pg-search .articles a{
+  display: inline-block;
+}
+.navigation .paginate .breadcrumb li a,
+.navigation .paginate .breadcrumb li span {
+  color: #777;
+}
+.navigation .paginate p {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-right: 12px;
+}
+.navigation .paginate .links button.next,
+.navigation .paginate .links button.prev {
+  font-size: 2.4rem;
+  font-weight: 600;
+  vertical-align: middle;
+  color: #645dc5;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  line-height: 0;
+  margin-bottom: 5px;
+}
+.navigation .paginate .links button {
+  display: inline-block;
+  vertical-align: middle;
+  color: #001628;
+  padding: 6px 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #e7e6e4;
+  border-radius: 10px;
+  transition: all .25s ease;
+  margin: 0 3px;
+}
+.navigation .paginate .links {
+  display: inline-block;
+}
+.navigation .paginate .links .current {
+    padding: 7px 14px;
+}
+.navigation .paginate .links button:hover {
+    background-color: #645dc5;
+    color: #fff;
+}
+.owl-theme .owl-nav.disabled+.owl-dots{
+  position: absolute;
+  bottom: 15px;
+  left: auto;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px){
+  #slide_lines .item {
+    padding: 50px 20px;
+  }
+
+}
