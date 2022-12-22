@@ -1,0 +1,174 @@
+.navigation{
+
+    .paginate{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+
+        @include sm{
+            text-align: left;
+            width: calc(100% - 170px);
+        }
+
+        .links{
+            margin-bottom: 0;
+
+            p{
+                display: inline-block;
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-right: 12px;
+            }
+
+            a{
+                display: inline-block;
+                vertical-align: middle;
+                color: $color-base;
+                padding: 4px 12px;
+                font-size: 1rem;
+                font-weight: 700;
+                background-color: #e7e6e4;
+                border-radius: 10px;
+                transition: all .25s ease;
+                margin: 0 3px;
+
+                @include sm{
+
+                    &:first-child{
+                        margin-right: 25px;
+                        display: inline-block;
+                    }
+                }
+                    
+                    
+                @include sm{
+                    font-size: 1.25rem;
+                }
+                
+                svg{
+                    stroke: $color-two;
+                }
+
+                &:hover{
+                    background-color: $color-two;
+                    color: white;
+                }
+
+                &:last-child{
+
+                    a{
+                        padding: 4px 0;
+                        background-color: transparent;
+                    }
+                }
+
+                &.next,
+                &.prev{
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                    vertical-align: middle;
+                    color: #645dc5;
+                    padding: 0;
+                    background-color: transparent;
+                    border-radius: 0;
+                    line-height: 0;
+                    margin-bottom: 5px;
+                }
+            }
+
+            span.dots{
+                font-size: 2.6rem;
+                font-weight: 600;
+                color: #e7e6e4;
+                margin: 0 5px;
+            }
+
+            .current{
+                display: inline-block;
+                vertical-align: middle;
+                padding: 6px 14px;
+                font-size: 1rem;
+                font-weight: 700;
+                border-radius: 10px;
+                transition: all .25s ease;
+                background-color: $color-two;
+                color: white;
+            }
+        }
+
+        .breadcrumb{
+
+            li{
+                display: inline-block;
+
+                &:last-child{
+                    color: #645dc5;
+                }
+
+                a{
+                    color: #777;
+
+                    &:hover{
+                        color: #645dc5;
+                    }
+                }
+
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &:first-child{
+
+                    img{
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .az-za{
+        width: 100%;
+
+        @include sm{
+            width: 170px;
+        }
+
+        button{
+            padding: 7px 15px 5px 15px;
+            font-size: 1rem;
+            border-radius: 10px;
+            color: $color-base;
+            background-color: #e7e6e4;
+            font-weight: bold;
+            margin-left: 5px;
+            line-height: 0;
+            height: 28px;
+            
+            @include sm{
+                height: 32px;
+                font-size: 1.2rem;
+            }
+            
+            &.active,
+            &:hover{
+                color: white;
+                background-color: $color-two;
+            }
+            
+        }
+    }
+
+    .end {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    @include sm{
+        .end {
+            margin-top: 0;
+            justify-content: flex-end;
+        }
+    }
+}

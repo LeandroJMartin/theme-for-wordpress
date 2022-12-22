@@ -1,0 +1,142 @@
+.contacts{
+    color: white;
+
+    .form-1{
+        padding: 30px;
+        
+        @include xl{
+            padding: 90px 90px 90px var(--vw);            
+        }
+
+        .tx{
+
+            p{
+                font-weight: 600;
+            }
+        }
+
+        .wpcf7{
+
+            input[type="submit"]{
+                background-color: $color-main;
+
+                &:hover{
+                    background-color: $color-two;
+                }
+            }            
+        }
+    }
+
+    .form-2{
+        padding: 30px;
+        background-color: #0B203A;
+        
+        @include xl{
+            padding: 90px var(--vw) 90px 90px ;
+        }
+
+        .wpcf7{
+
+            input[type="submit"]{
+                background-color: $color-two;
+                margin-top: 38px;
+
+                &:hover{
+                    background-color: $color-main; 
+                }
+            }
+        }
+    }
+    
+    .form-1,
+    .form-2{
+        @include placeholder(#ffffff);
+
+        .tx{
+            min-height: 120px;
+
+            h1, h2{
+                font-size: 2.2rem;
+            }
+        }
+        
+        .wpcf7{
+            margin-top: 20px;
+            
+            input,
+            textarea{
+                padding: 15px;
+                height: 50px;
+                border: 1px solid;
+                border-radius: 5px;
+                border-color: #e2e3e4;
+                background: transparent;
+                display: block;
+            }
+
+            textarea{
+                height: 270px;
+            }
+            
+            .file{
+                display: inline-block;
+                min-height: 170px;
+                width: 115px;
+                margin-top: 15px;
+
+                @include sm{
+                    min-height: 200px;
+                    width: 145px;
+                }
+
+                input[type="file"]{
+                    visibility: hidden;
+                }
+
+                label{
+                    position: relative;
+
+                    &:hover::before{
+                        background: $color-main;
+                    }
+                }
+
+                label::before{
+                    content: url(../img/attachment.svg);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: transparent;
+                    padding: 30px;
+                    border: 1px dashed;
+                    border-color: white;
+                    border-radius: 5px;
+                    width: 100px;
+                    height: 135px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: background .25s ease;
+                    
+                    @include sm{
+                        width: 130px;
+                        height: 160px;
+                    }
+                }
+            }
+
+            input[type="submit"]{
+                height: 40px;
+                border: 0;
+                padding: 10px 25px;
+                min-width: 130px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: white;
+                text-align: center;
+                transition: background .25s ease;
+            }
+        }
+    }
+}

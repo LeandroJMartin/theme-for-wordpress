@@ -1,0 +1,205 @@
+header{
+  max-height: 120px;
+  padding: 40px 15px;
+
+  .end {
+    justify-content: flex-start;
+  }
+  
+  @include xl{
+    max-height: 120px;
+    padding: 40px 0;
+
+    .end {
+      justify-content: flex-end;
+    }
+  }
+
+  .navigation-mobi.end{
+    justify-content: flex-end;
+  }
+
+  .logo{
+    width: calc(100% - 27px);
+    height: auto;
+
+    @include xl{
+      width: 145px;
+    }
+
+    @include rwd(1440px){
+      width: 180px;
+    }
+
+    img{
+      width: 120px;
+
+      @include xl{
+        width: 180px;
+      }
+    }
+
+  }
+
+  .navigation{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include translate(-100%, 0);
+    transition: all .3s ease;
+    background-color: white;
+    z-index: 999;
+    
+    &.active{
+      visibility: visible;
+      opacity: 1;
+      @include translate(0, 0);
+      height: 100vh;
+      width: 100%;
+      padding: 40px 20px;
+
+      .search{
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @include xl{
+      width: calc(100% - 180px);
+      height: auto;
+      position: relative;
+      @include translate(0, 0);
+      background-color: transparent;
+    }
+
+
+    .search{
+      width: 100%;
+      max-width: 250px;
+
+      form{
+        position: relative;
+
+        input{
+          margin-bottom: 0;
+          border-radius: 20px;
+          padding-left: 10px;
+
+        }
+        
+        @include placeholder($color-base);
+
+        button{
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 8px 10px;
+        }
+      }
+    }
+
+    .social{
+      width: 100%;
+      max-width: 100px;
+
+      a{
+        margin-left: 15px;
+
+        svg{
+          fill: $color-base;
+
+          @include xl{
+            fill: white;
+          }
+        }
+
+        &:hover{
+
+          svg{
+            fill: $color-main;
+          }
+        }
+      }
+    }
+  }
+
+  .navigation-mobi{
+    display: block;
+    width: 25px;
+    position: relative;
+    z-index: 9999;
+  
+    @include xl{
+      display: none;
+    }
+
+    .toggle{
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 9999;
+      
+  
+      .one,
+      .two,
+      .three {
+          width: 100%;
+          height: 2px;
+          background: white;
+          margin: 6px 0;
+          backface-visibility: hidden;
+          -moz-transition-duration: 0.3s;
+          -o-transition-duration: 0.3s;
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+      }
+  
+      .three {
+        width: 80%;
+      }
+  
+      &.on{
+  
+        .one{
+          -moz-transform: rotate(45deg) translate(2px, 4px);
+          -ms-transform: rotate(45deg) translate(2px, 4px);
+          -webkit-transform: rotate(45deg) translate(2px, 4px);
+          transform: rotate(45deg) translate(2px, 4px);
+          background: #777777;
+        }
+  
+        .two {
+            opacity: 0;
+        }
+  
+        .three {
+          -moz-transform: rotate(-45deg) translate(7px, -9px);
+          -ms-transform: rotate(-45deg) translate(7px, -9px);
+          -webkit-transform: rotate(-45deg) translate(7px, -9px);
+          transform: rotate(-45deg) translate(7px, -9px);
+          width: 100%;
+          background: #777777;
+        }
+      }
+    }
+  }
+
+  .order-1{-webkit-order: 2;order: 2;}
+  .order-2{-webkit-order: 1;order: 1;}
+  .order-3{-webkit-order: 3;order: 3;}
+
+  @include xl{
+    .order-1{-webkit-order: 1;order: 1;}
+    .order-2{-webkit-order: 2;order: 2;}
+    .order-3{-webkit-order: 3;order: 3;}
+  }
+}
+
+header.fixed{
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+}
+
+ 

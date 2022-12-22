@@ -1,0 +1,56 @@
+.product{
+    width: 100%;
+    position: relative;
+    
+    .img{
+        width: 100%;
+        max-height: 400px;
+        border-radius: 15px;
+
+        img{
+            border-radius: 15px;
+        }
+    }
+
+    h2{
+        margin-top: 7px;
+        color: $color-base;
+        font-weight: 900;
+        font-size: 1.2rem;
+        
+        @include sm{
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+    }
+
+    span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-main;
+        color: white;
+        font-weight: 700;
+        font-size: .95rem;
+        padding: 3px 10px;
+        display: inline-block;
+    }
+}
+
+.anything{
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 30px 0;
+
+    h3{
+        color: $color-base;
+        font-weight: 700;
+    }
+
+    p{
+        color: $color-main;
+        font-size: 1.15rem;
+        font-weight: 600;
+    }
+}

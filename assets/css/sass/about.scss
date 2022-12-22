@@ -1,0 +1,40 @@
+.about{
+    background-color: $color-two;
+    color: white;
+    padding: 20px 15px;
+
+    @include xl{
+        padding: 110px 0;
+    }
+
+    .tx{
+        padding-right: 0;
+        
+        @include xl{
+            padding-right: 55px;
+        }
+
+        h1{
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+        }
+
+        p{
+            line-height: 1.8;
+            
+            @include xl{
+                line-height: 2.6;
+            }
+        }
+    }
+
+    .img{
+        padding-left: 0;
+        max-height: 630px;
+        width: auto;
+
+        @include xl{
+            padding-left: 55px;
+        }
+    }
+}

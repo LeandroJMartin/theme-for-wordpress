@@ -1,0 +1,33 @@
+.banner{
+  position: relative;
+  height: 100%;
+
+
+  .owl-dots{
+    position: absolute;
+    bottom: 25px;
+    left: auto;
+    text-align: center;
+    width: 100%;
+
+    .owl-dot{
+
+      &:hover{
+
+        span{
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+
+    .owl-dot.active{
+
+
+      span{
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}

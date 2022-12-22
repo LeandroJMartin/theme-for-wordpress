@@ -1,0 +1,143 @@
+.blocks{
+
+    .box{
+        padding: 30px;
+        color: white;
+        text-align: center;
+        
+        @include sm{
+            padding: 50px 90px;
+        }
+
+        img{
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;            
+            margin: 0 auto;
+
+            @include sm{
+                width: auto;
+                max-width: 390px;
+                max-height: 520px;
+            }
+
+            @include rwd(1440px){
+                max-width: 500px;
+            }          
+        }
+
+        .title{
+            margin: 15px;
+            display: block;
+        }
+
+        .bt{
+            margin-top: 30px;
+        }
+            
+        .owl-theme{
+            position: relative;
+            
+            .owl-nav {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+
+                .owl-prev,
+                .owl-next{
+                    border: 1px solid;
+                    border-color: white;
+                    border-radius: 100%;
+                    height: 35px;
+                    width: 35px;
+                }
+
+                .owl-prev{
+                    position: absolute;
+                    left: -30px;
+                    
+                    svg{
+                        margin: 2px 0 0 0;
+                    }
+
+                    @include rwd(1440px){
+                        left: 30px;
+                    }
+                }
+
+                .owl-next{
+                    position: absolute;
+                    right: -30px;
+
+                    svg{
+                        margin: 1px 0 0 2px;
+                    } 
+                    
+                    @include rwd(1440px){
+                        right: 30px;
+                    }
+                }
+            }
+
+            .owl-dots {
+                margin-top: 35px;
+            }
+        }
+
+        .slide-lines{
+
+            .item{
+
+                img{
+                    max-height: 520px;
+                }
+
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.catalog{
+    height: 100%;
+    width: 100%;
+    background-color: #0d2233;
+    
+    .wrap{      
+        min-height: 370px;
+        background-image: url(../img/catalog.png);
+        background-repeat: no-repeat;
+        display: flex;
+        background-size: contain;
+        background-position: bottom;
+        align-items: flex-start;
+        padding-top: 30px;
+        
+        @include sm{
+            min-height: 420px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        @include rwd(1440px){
+            min-height: 620px;
+            background-size: auto;
+        }
+
+        .tx{
+
+            h2{
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+}

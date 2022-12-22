@@ -1,0 +1,189 @@
+.menu-mobi{
+  display: block;
+
+  ul{
+
+    li{
+      padding: 10px 0;
+
+      a{
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-base;
+      }
+
+      ul{
+
+        li{
+          padding: 7px 0 7px 15px;
+
+          a{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  ul > li > ul{
+    display: none;
+  }
+
+  ul > li > ul > li > ul{
+    display: none;
+  }
+
+  ul > li:hover > ul{
+    display: block;
+  }
+
+  ul > li > ul > li:hover > ul{
+    display: block;
+  }
+
+  ul > li:hover > a,
+  ul > li > ul > li:hover > a{
+    color: $color-main;
+  }
+
+  ul > li > ul > li:last-child > a,
+  ul > li > ul > li > ul > li:last-child > a{
+    color: $color-two;
+  }
+
+  @include xl{
+    display: none;
+  }
+}
+
+nav.navbar{
+  display: none;
+}
+
+@include xl{
+  nav.navbar{
+    max-width: calc(100% - 350px);
+    width: auto;
+    padding: 0 20px;
+    display: block;
+  
+    ul{
+      margin-bottom: 0;
+  
+      li.current-menu-parent{
+        
+        a{
+          color: $color-main;
+        }
+  
+        ul{
+  
+          li{
+  
+            a{
+              color: $color-base;
+            }
+  
+            &:hover,
+            &:focus,
+            &:visited{
+  
+              a{
+                color: $color-main;
+              }
+  
+              ul{
+    
+                li{
+        
+                  a{
+                    color: $color-base;
+                  }
+    
+                  &:hover,
+                  &:focus,
+                  &:visited{
+    
+                    a{
+                      color: $color-main;
+                    }
+                  }
+                }
+              }
+            }
+  
+          }
+        }
+      }
+      
+      li{
+        display: inline-block;
+        padding: 10px 15px;      
+        cursor: pointer;
+        position: relative;
+        width: auto;
+
+        a{
+          color: white;
+          font-size: 1rem;
+          font-weight: 600;
+  
+          &:hover{
+            color: $color-main;
+          }
+
+          @include rwd(1440px){
+            font-size: 1.15rem;
+          }
+        }
+  
+        ul{
+          position: absolute;
+          top: 40px;
+          left: 0;
+          background-color: white;
+          padding: 20px;
+          visibility: hidden;
+          opacity: 0;
+          @include translate(0, -30%);
+          transition: all .3s ease;
+  
+          li{
+            position: initial;
+            width: max-content;
+  
+            ul{
+              left: 100%;
+              top: 0;
+              border-left: 1px solid #e1e1e1;
+              visibility: hidden;
+              opacity: 0;
+              @include translate(-30%, 0);
+              height: 100%;
+              display: inline-table;
+            }
+  
+            a{
+              color: $color-base;
+              font-size: .95rem;
+              font-weight: 400;
+            }
+          }
+        }     
+      }
+
+      li.current-menu-item > a{
+        color: $color-main;
+      }
+  
+      li:hover > ul,
+      li:active > ul,
+      li:visited > ul,
+      li:focus > ul{
+        visibility: visible;
+        opacity: 1;
+        @include translate(0, 0);
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@mixin font-title {
+
+  font-size: 1.8rem;
+
+  @include sm {
+    font-size: 2.2rem;
+  }
+
+  @include xl {
+    font-size: 2.6rem;
+  }
+}
+
+
+
+

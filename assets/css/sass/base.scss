@@ -1,0 +1,122 @@
+/*-- defining to colors --*/
+$color-main: #e64279;
+$color-base: #001628;
+$color-two: #645dc5;
+$color-three: #5AC18A;
+$color-yellow: #F0AB02;
+$bg-color: #f6f6f6;
+$bg-color-two: #ededed;
+$bg-color-black: #001628;
+
+.color-main{ color: $color-main; }
+.color-base{ color: $color-base; }
+.color-two{ color: $color-two; }
+.color-three{ color: $color-three; }
+
+.bg-color{ background-color: $bg-color };
+.bg-color-two{ background-color: $bg-color-two };
+.bg-color-black{ background-color: $bg-color-black };
+
+.bg-green{ background-color: $color-three;}
+.bg-blue{ background-color: $color-two;}
+.bg-red{ background-color: $color-main;}
+.bg-yellow{ background-color: $color-yellow;}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
+
+a{
+  cursor: pointer;
+}
+
+body{
+  position: relative;
+}
+
+.title{
+  font-weight: 700;
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+    	-webkit-transform-origin: $origin;
+    	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin max-content{
+  width: intrinsic;
+  width: -webkit-max-content;
+  width: -moz-fit-content;
+  width: -o-max-content;
+  width: max-content;
+}
+
+@mixin placeholder ($color){
+  ::-webkit-input-placeholder{ color: $color; font-weight: 600; }
+  :-ms-input-placeholder{ color: $color; font-weight: 600; }
+  ::-ms-input-placeholder{ color: $color; font-weight: 600; }
+  ::placeholder{ color: $color; font-weight: 600; }
+  ::-moz-placeholder { color: $color; font-weight: 600; }
+  :-moz-placeholder { color: $color; font-weight: 600; }  
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background: $bg-color-two;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: $color-main;
+}
+
+.bt{
+  padding: 10px 25px 8px 25px;
+  border: 1px solid;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: all .3s ease;
+  display: inline-block;
+}
+.bt-default{
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+.bt-default:hover{
+  background-color: $color-main;
+  color: white;
+  border-color: $color-main;
+}
